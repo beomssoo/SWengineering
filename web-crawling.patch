@@ -1,0 +1,16 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(date 1558701197000)
++++ app/src/main/res/layout/activity_main.xml	(date 1558701428400)
+@@ -9,7 +9,7 @@
+     android:padding="10dp"
+     tools:context=".MainActivity">
+ 
+-    <LinearLayout 
++    <LinearLayout
+         android:id="@+id/LinearLayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
