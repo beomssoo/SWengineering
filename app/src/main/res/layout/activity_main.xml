@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#88ff00ff"
-                    android:hint="이곳에 디버깅 출력" />
+                    android:hint="이곳에 디버fy깅 출력" />
 
                 <TextView
                     android:id="@+id/debug"
