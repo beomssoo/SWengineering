@@ -1,0 +1,7 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision f2d8d177899c80127aef5d333b88f78fae0baf98)
++++ app/src/main/res/layout/activity_main.xml	(date 1558774849178)
