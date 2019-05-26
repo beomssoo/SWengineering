@@ -37,8 +37,13 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView webParsingOutput;
     TextView webParsingOutput2;
+
     TextView debug;
     TextView jisu;
+
+    
+
+
 
     String HTMLPageURL ="https://search.naver.com/search.naver?query=";
     String HTMLContentInStringFormat="";
