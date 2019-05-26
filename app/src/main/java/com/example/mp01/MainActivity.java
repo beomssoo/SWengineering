@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView debug;
 
-    
+
 
 
 
