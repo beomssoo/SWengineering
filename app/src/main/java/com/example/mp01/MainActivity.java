@@ -32,6 +32,17 @@ public class MainActivity extends AppCompatActivity {
     TextView webParsingOutput2;
     TextView debug;
 
+
+
+
+
+
+
+
+
+
+
+
     String HTMLPageURL ="https://search.naver.com/search.naver?query=";
     String HTMLContentInStringFormat="";
     String temperature="";
