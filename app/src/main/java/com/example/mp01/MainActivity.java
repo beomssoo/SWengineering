@@ -30,16 +30,10 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView webParsingOutput;
     TextView webParsingOutput2;
+
     TextView debug;
 
-
-
-
-
-
-
-
-
+    
 
 
 
