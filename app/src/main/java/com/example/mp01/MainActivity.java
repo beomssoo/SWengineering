@@ -29,7 +29,7 @@ import java.io.IOException;
  * 복잡한 것을 피하려고 notification, timer는 지웠음.
  * 얻은것 : list형태로 나오는 아이템은 잘 나옴. 단, query가 정확할수록 좋은 값을 얻게됨. 이건 아가리를 잘 털어야겠다.
  * */
-
+llllllll
 public class MainActivity extends AppCompatActivity {
 
     //XML UI 선언
