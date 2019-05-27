@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.util.Log;
+
 
 import com.example.mp01.R;
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     String humidity="";
     String verysmall="";
     PendingIntent intent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
                 String sample="";
                 String sample2="";
                 String sample3="";
+                String sample4 = "";
+                int a=0;
 
                 String userQuery = input.getText().toString(); // 내가 검색창에 "성남날씨"라고 치면, 스트링으로 바꿔서 userQuery에 할당
                 HTMLPageURL+=userQuery; // HTMLPagURL과 concatenation
@@ -119,17 +124,28 @@ public class MainActivity extends AppCompatActivity {
                     temperature = userQuery + " : " + sample + "℃";
                 }
 
-                for(Element e: temp2){
-                    if(temp2.equals("미세먼지")) {
+
+                for(Element e: temp2)
+                {
+                    if(temp2.equals("미세먼지"))
+                    {
                         sample2 = e.text();
                         small = "미세먼지 : " + sample2;
                     }
                 }
 
                 for(Element e: temp3){
-                    sample3 = e.text();
-                    humidity = "현재 습도 : " + sample3;
+                    sample3 = e.text();  // sample3 : 37%
+                    humidity = "현재 습도 : " + sample3;  //현재습도 : 37%
+
+                   // sample4 = sample3.substring(0,1);
+                    //a =Integer.parseInt(sample4);
+                    //a=a+1;
+                    //Log.i ("System.out", "Hello!");
+
+
                 }
+
 
 
             }catch(IOException e){
