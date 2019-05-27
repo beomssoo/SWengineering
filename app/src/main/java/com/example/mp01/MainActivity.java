@@ -1,6 +1,5 @@
 package com.example.mp01;
 
-
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -26,6 +25,13 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
+/*
+ * 190507 윤승기릿
+ * 변경사항 :
+ * parsing할 사이트를 naver shopping이 아닌, 그냥 naver에서 해 봄(반만 됨)
+ * 복잡한 것을 피하려고 notification, timer는 지웠음.
+ * 얻은것 : list형태로 나오는 아이템은 잘 나옴. 단, query가 정확할수록 좋은 값을 얻게됨. 이건 아가리를 잘 털어야겠다.
+ * */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,8 +40,13 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView webParsingOutput;
     TextView webParsingOutput2;
+
     TextView debug;
     TextView jisu;
+
+    
+
+
 
     String HTMLPageURL ="https://search.naver.com/search.naver?query=";
     String HTMLContentInStringFormat="";
@@ -98,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params){
             debug.setText("JsoupAsyncTask.doInBackground()");
             try{
+
                 String sample="";
                 String sample2="";
                 String sample3="";
@@ -149,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
                     } catch(NumberFormatException nfe) {
                         System.out.println("Could not parse " + nfe);
                     }
+                }
 
                     b= 1.8*temperature2-(0.55*(1-a/100))*((1.8*temperature2)-26)+32;
 
@@ -163,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
             }catch(IOException e){
                 e.printStackTrace();
             }
+
             return null;
         }
 
@@ -170,13 +184,11 @@ public class MainActivity extends AppCompatActivity {
         protected  void onPostExecute(Void result){
             HTMLContentInStringFormat = temperature2+"\n"+small+"\n";
             webParsingOutput.setText(HTMLContentInStringFormat);
-          //  webParsingOutput.setText(a);
-            //jisu.setText("안녕"+humidity);
-            jisu.setText("불쾌지수 : "+b);
-          //  jisu.setText(a);
             HTMLPageURL = "https://search.naver.com/search.naver?query=";
             HTMLContentInStringFormat="";
             // jisu=9/5*temp-0.55(1-sample3/100)((9/5)*sample-26)+32;
+
+
 
 
 
